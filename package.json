@@ -1,6 +1,6 @@
 {
   "name": "nudgeme",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Send yourself a nudge; anytime, anywhere",
   "main": "index.js",
   "scripts": {
