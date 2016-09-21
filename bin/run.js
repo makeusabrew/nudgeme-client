@@ -6,19 +6,23 @@ const fs = require("fs");
 const configPath = `${process.env.HOME}/.nudgeme.json`;
 
 const Nudge = require("../lib/nudge");
-const nudge = new Nudge();
 
 const run = defaults => {
-  const params = Object.assign({}, defaults, {});
-
   console.log("Sending nudge...");
-  nudge.configure(params)
+
+  const nudge = new Nudge();
+
+  nudge.configure(defaults)
   .send(process.argv.slice(2).join(" "))
   .then(response => {
     console.log(response);
   })
   .catch(e => {
-    console.error(e.response.body);
+    if (e.response) {
+      console.error(e.response.body);
+    } else {
+      console.error(e);
+    }
   });
 };
 
