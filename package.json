@@ -13,6 +13,7 @@
     "nudgeme": "./bin/run.js"
   },
   "dependencies": {
+    "prompt": "^1.0.0",
     "request": "^2.75.0",
     "request-promise": "^4.1.1"
   }
