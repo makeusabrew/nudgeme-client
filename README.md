@@ -21,3 +21,8 @@ And basically any date format the awesome [chrono](https://github.com/wanasit/ch
 ## First run
 
 You'll be prompted for an email address where nudges are sent to. Please; make it one you own.
+
+## Backend code
+
+Can be found [here](https://github.com/makeusabrew/nudgeme-server). Doesn’t do much. Currently hosted on
+[now](https://zeit.co/now).
