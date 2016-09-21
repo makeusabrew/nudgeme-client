@@ -7,11 +7,12 @@ const defaults = require(`${process.env.HOME}/.nudgeme.json`);
 
 const params = Object.assign({}, defaults, {});
 
+console.log("Sending nudge...");
 nudge.configure(params)
 .send(process.argv.slice(2).join(" "))
 .then(response => {
-  console.log("Nudge sent!", response);
+  console.log(response);
 })
 .catch(e => {
-  console.error("Oh no, an error!", e);
+  console.error(e.response.body);
 });
